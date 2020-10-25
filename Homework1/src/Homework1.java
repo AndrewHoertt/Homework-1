@@ -10,13 +10,13 @@ public class Homework1 {
 	 
 	 public void Tester()
 	 {
-		 Integer tester = arrayListSum(new ArrayList<Integer>());
+		 ArrayList<Integer> tester = arrayListCreate(0,9);
 		 System.out.print(tester.toString());
 	 }
 	 
 	 
 	 /**
-	 Question 3.1. Method returns the requested array list containing the predetermined integers
+	 Question 3.1 Method returns the requested array list containing the predetermined integers
 	 @return list
 	 */
 	 public ArrayList<Integer> arrayListInt()
@@ -40,7 +40,7 @@ public class Homework1 {
 	 }
 	 
 	 /**
-	 Question 3.4. Method returns sum of all the elements in the array list provided
+	 Question 3.4 Method returns sum of all the elements in the array list provided
 	 @param pList The array list of integers that the user would like to get the sum of.
 	 @return listSum
 	 */
@@ -55,6 +55,33 @@ public class Homework1 {
 		 }
 		
 		return listSum;
+	 }
+	 
+	 /**
+	 Question 3.5 Method creates a new array list based on the size value and the number that the elements should be initialized to.
+	 @param pLen The size of the array list that is to be created
+	 @param pInitValue The value that each of the elements of the new array should be initialized to
+	 @return newList
+	 */
+	 public ArrayList<Integer> arrayListCreate(int pLen, int pInitValue)
+	 {
+		 int mLen = pLen;
+		 int mInitValue = pInitValue;
+		 
+		 if (mLen != 0)
+		 {
+			 ArrayList <Integer> newList = new ArrayList <Integer>();
+			 for(int i = 0; i < mLen; i++)
+			 {
+				 newList.add(mInitValue);
+			 }
+			 
+			 return newList;
+		 }
+		 else
+		 {
+			 return null;
+		 }
 	 }
 }
 
